@@ -12,10 +12,11 @@ To install the Python library dependencies
 
 `pip install -r requirements.txt`
 
+To run the program
 
-python redmet_download.py <arguements>
+python redmet_download.py <arguments>
 
-## Arguments
+**Arguments**
 
 **:param** '--auto'              `boolean`             : True = Loop every 15 minutes and collected latest 15 minutes of data
 
