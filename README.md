@@ -1,6 +1,73 @@
 # ICC Weather Bot
 
+ICC Bot to automatically download excel file weather data from https://redmet.icc.org.gt/redmet/comparativas; 
 
+redmet_download.py : The main python script
+
+An output file will contain data of Estaciones, Variables within a defined time range and Agrupar
+
+## Usage
+
+To install the Python library dependencies
+
+`pip install -r requirements.txt`
+
+
+python redmet_download.py <arguements>
+
+## Arguments
+
+**:param** '--auto'              `boolean`             : True = Loop every 15 minutes and collected latest 15 minutes of data
+
+**:param** '--path'              `string`              : Where to save the data (defaults current folder)
+
+**:param** '--csv'               `boolean`             : If True, then the excel file will be converted to CSV (UTF-8)
+
+**:param** '--user_name'         `string`              : User name for loggin in to website
+
+**:param** '--user_pass'         `string`              : User password for loggin in to website
+
+**:param** '--estaciones_list'   `List of strings`     : List of Estaciones to collect
+
+**:param** '--variable_list'     `List of strings`     : List of Variables to collect
+
+**:param** '--start_date'        `string`              : Start date and time to collect (only if auto is False)
+
+**:param** '--end_date'          `string`              : End date and time to collect (only if auto is False)
+
+**:param** '--agrupar'           `string`              : Agrupar
+
+**:param** '--mergefarms'        `boolean`             : Merge the current, daily, 7-day and 31-day weather to the farm locations
+
+**:param** '--farms_file'        `string`              : If merging, name of the file with the farm information
+
+Estaciones and Variable options can be found in the file List of Stations and Variables as of 10 May 2022.txt which comes zipped with this file.
+
+## Examples
+
+**One time download**
+
+`python redmet_download.py --user_name "<YOUR USERNAME>" --user_pass "<YOUR PASSWORD>" --estaciones_list "San Nicolas" "Bonanza" "Amazonas" --variable_list "Temperatura (°C) " "Radiacion (w/m²) " "Humedad Relativa (%) " --start_date "01/04/2022 00:00" --end_date "02/04/2022 00:00" --agrupar "Cada 15 minutos"`
+
+**Download and save every 15 minutes**
+
+`python redmet_download.py --user_name "<YOUR_USERNAME>" --user_pass "<YOUR PASSWORD>" --estaciones_list "San Nicolas" "Bonanza" "Amazonas" --variable_list "Temperatura (°C) " "Radiacion (w/m²) " "Humedad Relativa (%) " --auto True --csv True`
+
+**Download and Merge with Farm Data**
+
+`python redmet_download.py --csv True --user_name "<YOUR_USERNAME>" --user_pass "<YOUR PASSWORD>" --estaciones_list "San Nicolas" "Bonanza" "Amazonas" --variable_list "Temperatura (°C) " "Radiacion (w/m²) " "Humedad Relativa (%) " --start_date "01/04/2022 00:00" --end_date "02/04/2022 00:00" --agrupar "Cada 15 minutos" --mergefarms True##`
+
+## Dependencies
+
+Tested on the following;
+
+* pandas==1.4.0
+* pytz==2021.3
+* webdriver-manager==3.5.4
+* selenium==4.1.3
+* xlrd==2.0.1
+
+# General Gitlab Information
 
 ## Getting started
 

@@ -1,0 +1,69 @@
+STATIONS
+========
+
+Alto Options
+------------
+
+"Pueblo Real (ACAX-TNC)"
+"El Platanar"
+"Yepocapa (FCA-CATIE)"
+"Santa Teresa"
+"San Clemente"
+"Concepción"
+"Lorena"
+"Cengicana"
+
+Medio Options
+-------------
+
+"El Balsamo"
+"Tulula"
+"Central Izalco"
+"Cocales"
+"Costa Brava"
+
+Bajo Options
+------------
+
+"Naranjales"
+"Chaparrastique"
+"Puyumate"
+"COPAL"
+"Trinidad"
+"Tehuantepeq"
+"Bouganvilia"
+"Xoluta"
+"Peten Oficina"
+"Providencia"
+
+Litoral Options
+---------------
+
+"Monte Alegre"
+"Alamo"
+"Bonanza"
+"Amazonas"
+"San Nicolas"
+"La Giralda"
+"Irlanda"
+"Trinidad Magdalena"
+"La Maquina"
+"Chiquirines"
+"San Antonio EV"
+"San Rafael"
+"Agua Santa"
+"El Carmen"
+"La Candelaria"
+
+
+VARIABLES
+=========
+
+"Temperatura (°C) "
+"Radiacion (w/m²) "
+"Humedad Relativa (%) "
+"Precipitacion (mm)"
+"Velocidad Viento (kmh)"
+"Mojadura (unidades)"
+"Presion Atmosferica (bar)"
+"Direccion del Viento (°az)"
