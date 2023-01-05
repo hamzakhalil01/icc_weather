@@ -246,7 +246,7 @@ class RedmetDownload:
                                      skiprows=4, skipfooter=4, 
                                      index_col=None)
             csv_file = newest.replace(".xls", ".csv")
-#            os.remove(newest)
+            os.remove(newest)
             data_xls.to_csv(csv_file, encoding='utf-8', date_format='%Y-%m-%d %H:%M')
 
     def return_last_file(self):
